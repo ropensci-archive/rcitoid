@@ -6,39 +6,7 @@ rcitoid
 [![Build status](https://ci.appveyor.com/api/projects/status/yk8vpcdr1rmi7byy?svg=true)](https://ci.appveyor.com/project/sckott/rcitoid)
 
 
-```{r echo=FALSE}
-library("knitr")
-hook_output <- knitr::knit_hooks$get("output")
-knitr::knit_hooks$set(output = function(x, options) {
-   lines <- options$output.lines
-   if (is.null(lines)) {
-     return(hook_output(x, options))  # pass to default hook
-   }
-   x <- unlist(strsplit(x, "\n"))
-   more <- "..."
-   if (length(lines)==1) {        # first n lines
-     if (length(x) > lines) {
-       # truncate the output, but add ....
-       x <- c(head(x, lines), more)
-     }
-   } else {
-     x <- c(if (abs(lines[1])>1) more else NULL,
-            x[lines],
-            if (length(x)>lines[abs(length(lines))]) more else NULL
-           )
-   }
-   # paste these lines together
-   x <- paste(c(x, ""), collapse = "\n")
-   hook_output(x, options)
- })
 
-knitr::opts_chunk$set(
-  warning = FALSE,
-  message = FALSE,
-  collapse = TRUE,
-  comment = "#>"
-)
-```
 
 rcitoid
 
@@ -50,14 +18,16 @@ docs: <https://en.wikipedia.org/api/rest_v1/#!/Citation/getCitation>
 
 Development version
 
-```{r eval=FALSE}
+
+```r
 devtools::install_github("ropenscilabs/rcitoid")
 ```
 
 Load the package
 
 
-```{r}
+
+```r
 library("rcitoid")
 ```
 
@@ -65,26 +35,74 @@ library("rcitoid")
 
 DOI
 
-```{r output.lines=1:10}
+
+```r
 cit_oid("10.1108/jd-12-2013-0166")
+#> [[1]]
+#> [[1]]$key
+#> [1] "Q8KP63DF"
+#> 
+#> [[1]]$version
+#> [1] 0
+#> 
+#> [[1]]$itemType
+#> [1] "webpage"
+#> 
+...
 ```
 
 PMID
 
-```{r output.lines=1:10}
+
+```r
 cit_oid(30446726)
+#> [[1]]
+#> [[1]]$key
+#> [1] "TV4KGPTB"
+#> 
+#> [[1]]$version
+#> [1] 0
+#> 
+#> [[1]]$itemType
+#> [1] "journalArticle"
+#> 
+...
 ```
 
 PMCID
 
-```{r output.lines=1:10}
+
+```r
 cit_oid("PMC4679344")
+#> [[1]]
+#> [[1]]$key
+#> [1] "5GMK48YZ"
+#> 
+#> [[1]]$version
+#> [1] 0
+#> 
+#> [[1]]$itemType
+#> [1] "journalArticle"
+#> 
+...
 ```
 
 ISBN
 
-```{r output.lines=1:10}
+
+```r
 cit_oid(1439895619)
+#> [[1]]
+#> [[1]]$itemType
+#> [1] "book"
+#> 
+#> [[1]]$title
+#> [1] "Agroecology : the ecology of sustainable food systems"
+#> 
+#> [[1]]$oclc
+#> [1] "744303838"
+#> 
+...
 ```
 
 ## Meta

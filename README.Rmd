@@ -1,0 +1,47 @@
+rcitoid
+=========
+
+[![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
+[![Build Status](https://travis-ci.com/ropenscilabs/rcitoid.svg?branch=master)](https://travis-ci.com/ropenscilabs/rcitoid)
+
+```{r echo=FALSE}
+knitr::opts_chunk$set(
+  comment = "#>",
+  collapse = TRUE,
+  warning = FALSE,
+  message = FALSE
+)
+```
+
+rcitoid
+
+Client for the Citoid service <https://www.mediawiki.org/wiki/Citoid>
+
+docs: <https://en.wikipedia.org/api/rest_v1/#!/Citation/getCitation>
+
+## Install
+
+Development version
+
+```{r eval=FALSE}
+devtools::install_github("ropenscilabs/rcitoid")
+```
+
+```{r}
+library("rcitoid")
+```
+
+## get a citation
+
+```{r}
+oc_doi2ids("10.1097/igc.0000000000000609")
+oc_pmid2ids("26645990")
+oc_pmcid2ids("PMC4679344")
+```
+
+## Meta
+
+* Please [report any issues or bugs](https://github.com/ropenscilabs/rcitoid/issues)
+* License: MIT
+* Get citation information for `rcitoid` in R doing `citation(package = 'rcitoid')`
+* Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.

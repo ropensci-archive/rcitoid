@@ -1,7 +1,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://en.wikipedia.org/api/rest_v1/data/citation/mediawiki/10.1108%2Fjd-12-2013-0166
+    uri: https://en.wikipedia.org/api/rest_v1/data/citation/mediawiki/1439895619
     body:
       encoding: ''
       string: ''
@@ -17,9 +17,9 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      date: Thu, 07 Feb 2019 00:23:40 GMT
+      date: Thu, 07 Feb 2019 00:32:38 GMT
       content-type: application/json; charset=utf-8
-      content-length: '349'
+      content-length: '515'
       connection: keep-alive
       access-control-allow-origin: '*'
       access-control-allow-headers: accept, content-type, content-length, cache-control,
@@ -32,18 +32,18 @@ http_interactions:
       content-security-policy: default-src 'none'; frame-ancestors 'none'
       x-content-security-policy: default-src 'none'; frame-ancestors 'none'
       x-webkit-csp: default-src 'none'; frame-ancestors 'none'
-      content-location: https://en.wikipedia.org/api/rest_v1/data/citation/mediawiki/10.1108%2Fjd-12-2013-0166
+      content-location: https://en.wikipedia.org/api/rest_v1/data/citation/mediawiki/1439895619
       access-control-allow-methods: GET,HEAD
       referrer-policy: origin-when-cross-origin
       cache-control: private, max-age=0, s-maxage=0, must-revalidate
-      x-request-id: 9ca13310-2a6e-11e9-a1e5-fc6aa720f2ad
-      server: restbase2007
+      x-request-id: de713b90-2a6f-11e9-9706-551288f68934
+      server: restbase2009
       vary: Accept-Encoding,X-Seven
-      x-varnish: 350269304, 906905491, 337366467
+      x-varnish: 1051122996, 1067681019, 314734024
       via: 1.1 varnish (Varnish/5.1), 1.1 varnish (Varnish/5.1), 1.1 varnish (Varnish/5.1)
       accept-ranges: bytes
       age: '0'
-      x-cache: cp2001 pass, cp4028 pass, cp4030 pass
+      x-cache: cp2016 pass, cp4031 pass, cp4030 pass
       x-cache-status: pass
       server-timing: cache;desc="pass"
       strict-transport-security: max-age=106384710; includeSubDomains; preload
@@ -51,6 +51,11 @@ http_interactions:
       x-client-ip: 157.130.179.86
     body:
       encoding: UTF-8
-      string: '[{"key":"WN6LM2X2","version":0,"itemType":"webpage","url":"https://www.emeraldinsight.com/action/captchaChallenge?redirectUrl=https%3A%2F%2Fwww.emeraldinsight.com%2Fdoi%2Fabs%2F10.1108%2FJD-12-2013-0166&","title":"EmeraldInsight","accessDate":"2019-02-07","websiteTitle":"www.emeraldinsight.com","DOI":"10.1108/jd-12-2013-0166","source":["Zotero"]}]'
-  recorded_at: 2019-02-07 00:23:40 GMT
+      string: '[{"itemType":"book","title":"Agroecology : the ecology of sustainable
+        food systems","oclc":"744303838","url":"https://www.worldcat.org/oclc/744303838","ISBN":["9781439895610","1439895619"],"edition":"Third
+        edition","place":"Boca Raton","numPages":"xvii, 371 pages, 16 unnumbered pages
+        of plates","abstractNote":"Resource added for the Sustainable Food & Agriculture
+        Systems program 100903","contributor":[["Engles,","Eric,"]],"author":[["Gliessman,
+        Stephen","R.,"]],"accessDate":"2019-02-07","source":["WorldCat"]}]'
+  recorded_at: 2019-02-07 00:32:38 GMT
   recorded_with: vcr/0.2.2.9312, webmockr/0.3.1.9311

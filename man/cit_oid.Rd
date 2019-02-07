@@ -4,8 +4,7 @@
 \alias{cit_oid}
 \title{Get Citoid data}
 \usage{
-cit_oid(id, format = "mediawiki", accept = "json",
-  accept_language = NULL, ...)
+cit_oid(id, format = "mediawiki", accept_language = NULL, ...)
 }
 \arguments{
 \item{id}{(character) id of an article, DOI, ISBN, PMCID or PMID}
@@ -13,10 +12,8 @@ cit_oid(id, format = "mediawiki", accept = "json",
 \item{format}{(character) the format to use for the resulting citation data.
 one of mediawiki (default), zotero, mediawiki-basefields, bibtex}
 
-\item{accept}{(character) json, bibtex, or problem-json}
-
-\item{accept_language}{(character) a field_name; all the rows that have an empty
-value in the field_name specified are removed from the result set}
+\item{accept_language}{(character) for some articles the result depends on
+the accept language value, so provide it if localized content is required}
 
 \item{...}{curl options passed on to \link[crul:verb-GET]{crul::verb-GET}}
 }
@@ -27,9 +24,14 @@ explanation of the resulting columns
 \description{
 Get Citoid data
 }
+\details{
+\code{cit_oid_()} gets raw text (either bibtex or JSON), and \code{cit_oid()}
+parses the text as appropriate for the type
+}
 \examples{
 \dontrun{
 doi1 <- "10.1108/jd-12-2013-0166"
+doi2 <- "10.1371/journal.pone.0058568"
 pmid1 <- 30446726
 pmcid1 <- "PMC4679344"
 isbn1 <- 1439895619
@@ -39,7 +41,7 @@ cit_oid(doi1)
 cit_oid(pmid1, format = "mediawiki")
 cit_oid(pmid1, format = "zotero")
 cit_oid(pmid1, format = "mediawiki-basefields")
-cat(cit_oid(pmid1, format = "bibtex"))
+cat(cit_oid(pmid1, format = "bibtex")[[1]])
 
 # PMID example
 cit_oid(pmid1, verbose = TRUE)
@@ -49,6 +51,18 @@ cit_oid(isbn1, verbose = TRUE)
 
 # PMCID example
 cit_oid(pmcid1)
+
+# set the accept language
+x <- cit_oid(pmid1, accept_language = "fr-FR", verbose = TRUE)
+x <- cit_oid(doi2, accept_language = "de-DE", verbose = TRUE)
+
+# just get raw text/json
+cit_oid_(pmcid1)
+
+# many ids at once
+cit_oid(id = c(pmid1, pmcid1, isbn1))
+cit_oid_(id = c(pmid1, pmcid1, isbn1))
+cit_oid_(id = c(pmid1, pmcid1, isbn1), format = "bibtex")
 }
 }
 \references{

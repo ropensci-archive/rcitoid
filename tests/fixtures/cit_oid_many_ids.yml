@@ -1,0 +1,217 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://en.wikipedia.org/api/rest_v1/data/citation/mediawiki/30446726
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.3 crul/0.7.0.9100 rOpenSci(rcitoid/0.0.2.9110)
+      X-USER-AGENT: r-curl/3.3 crul/0.7.0.9100 rOpenSci(rcitoid/0.0.2.9110)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      date: Thu, 07 Feb 2019 00:25:37 GMT
+      content-type: application/json; charset=utf-8
+      content-length: '1096'
+      connection: keep-alive
+      access-control-allow-origin: '*'
+      access-control-allow-headers: accept, content-type, content-length, cache-control,
+        accept-language, api-user-agent, if-match, if-modified-since, if-none-match,
+        dnt, accept-encoding
+      access-control-expose-headers: etag
+      x-xss-protection: 1; mode=block
+      x-content-type-options: nosniff
+      x-frame-options: SAMEORIGIN
+      content-security-policy: default-src 'none'; frame-ancestors 'none'
+      x-content-security-policy: default-src 'none'; frame-ancestors 'none'
+      x-webkit-csp: default-src 'none'; frame-ancestors 'none'
+      content-location: https://en.wikipedia.org/api/rest_v1/data/citation/mediawiki/30446726
+      access-control-allow-methods: GET,HEAD
+      referrer-policy: origin-when-cross-origin
+      cache-control: private, max-age=0, s-maxage=0, must-revalidate
+      x-request-id: e334ac80-2a6e-11e9-a31b-7b31e4279c2f
+      server: restbase2018
+      vary: Accept-Encoding,X-Seven
+      content-encoding: gzip
+      x-varnish: 709280967, 597571779, 341999950
+      via: 1.1 varnish (Varnish/5.1), 1.1 varnish (Varnish/5.1), 1.1 varnish (Varnish/5.1)
+      accept-ranges: bytes
+      age: '0'
+      x-cache: cp2013 pass, cp4027 pass, cp4030 pass
+      x-cache-status: pass
+      server-timing: cache;desc="pass"
+      strict-transport-security: max-age=106384710; includeSubDomains; preload
+      x-analytics: WMF-Last-Access=07-Feb-2019;WMF-Last-Access-Global=07-Feb-2019;https=1
+      x-client-ip: 157.130.179.86
+    body:
+      encoding: UTF-8
+      string: '[{"key":"BND44NJZ","version":0,"itemType":"journalArticle","tags":[],"title":"Enhanced
+        protection conferred by mucosal BCG vaccination associates with presence of
+        antigen-specific lung tissue-resident PD-1+ KLRG1- CD4+ T cells","ISSN":["1935-3456"],"journalAbbreviation":"Mucosal
+        Immunol","publicationTitle":"Mucosal Immunology","date":"2018-11-16","abstractNote":"BCG,
+        the only vaccine licensed against tuberculosis, demonstrates variable efficacy
+        in humans. Recent preclinical studies highlight the potential for mucosal
+        BCG vaccination to improve protection. Lung tissue-resident memory T cells
+        reside within the parenchyma, potentially playing an important role in protective
+        immunity to tuberculosis. We hypothesised that mucosal BCG vaccination may
+        enhance generation of lung tissue-resident T cells, affording improved protection
+        against Mycobacterium tuberculosis. In a mouse model, mucosal intranasal (IN)
+        BCG vaccination conferred superior protection in the lungs compared to the
+        systemic intradermal (ID) route. Intravascular staining allowed discrimination
+        of lung tissue-resident CD4+ T cells from those in the lung vasculature, revealing
+        that mucosal vaccination resulted in an increased frequency of antigen-specific
+        tissue-resident CD4+ T cells compared to systemic vaccination. Tissue-resident
+        CD4+ T cells induced by mucosal BCG displayed enhanced proliferative capacity
+        compared to lung vascular and splenic CD4+ T cells. Only mucosal BCG induced
+        antigen-specific tissue-resident T cells expressing a PD-1+ KLRG1- cell-surface
+        phenotype. These cells constitute a BCG-induced population which may be responsible
+        for the enhanced protection observed with IN vaccination. We demonstrate that
+        mucosal BCG vaccination significantly improves protection over systemic BCG
+        and this correlates with a novel population of BCG-induced lung tissue-resident
+        CD4+ T cells.","DOI":"10.1038/s41385-018-0109-1","extra":"PMID: 30446726","libraryCatalog":"PubMed","url":"https://www.ncbi.nlm.nih.gov/pubmed/30446726","accessDate":"2019-02-07","author":[["N.
+        C.","Bull"],["E.","Stylianou"],["D. A.","Kaveh"],["N.","Pinpathomrat"],["J.","Pasricha"],["R.","Harrington-Kandt"],["M.
+        C.","Garcia-Pelayo"],["P. J.","Hogarth"],["H.","McShane"]],"PMID":"30446726","source":["Zotero"]}]'
+  recorded_at: 2019-02-07 00:25:44 GMT
+  recorded_with: vcr/0.2.2.9312, webmockr/0.3.1.9311
+- request:
+    method: get
+    uri: https://en.wikipedia.org/api/rest_v1/data/citation/mediawiki/PMC4679344
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.3 crul/0.7.0.9100 rOpenSci(rcitoid/0.0.2.9110)
+      X-USER-AGENT: r-curl/3.3 crul/0.7.0.9100 rOpenSci(rcitoid/0.0.2.9110)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      date: Thu, 07 Feb 2019 00:25:43 GMT
+      content-type: application/json; charset=utf-8
+      content-length: '1086'
+      connection: keep-alive
+      access-control-allow-origin: '*'
+      access-control-allow-headers: accept, content-type, content-length, cache-control,
+        accept-language, api-user-agent, if-match, if-modified-since, if-none-match,
+        dnt, accept-encoding
+      access-control-expose-headers: etag
+      x-xss-protection: 1; mode=block
+      x-content-type-options: nosniff
+      x-frame-options: SAMEORIGIN
+      content-security-policy: default-src 'none'; frame-ancestors 'none'
+      x-content-security-policy: default-src 'none'; frame-ancestors 'none'
+      x-webkit-csp: default-src 'none'; frame-ancestors 'none'
+      content-location: https://en.wikipedia.org/api/rest_v1/data/citation/mediawiki/PMC4679344
+      access-control-allow-methods: GET,HEAD
+      referrer-policy: origin-when-cross-origin
+      cache-control: private, max-age=0, s-maxage=0, must-revalidate
+      x-request-id: e624eea0-2a6e-11e9-9073-f1d3dad97ff2
+      server: restbase2009
+      vary: Accept-Encoding,X-Seven
+      content-encoding: gzip
+      x-varnish: 371332263, 913901126, 333633712
+      via: 1.1 varnish (Varnish/5.1), 1.1 varnish (Varnish/5.1), 1.1 varnish (Varnish/5.1)
+      accept-ranges: bytes
+      age: '0'
+      x-cache: cp2023 pass, cp4028 pass, cp4030 pass
+      x-cache-status: pass
+      server-timing: cache;desc="pass"
+      strict-transport-security: max-age=106384710; includeSubDomains; preload
+      x-analytics: WMF-Last-Access=07-Feb-2019;WMF-Last-Access-Global=07-Feb-2019;https=1
+      x-client-ip: 157.130.179.86
+    body:
+      encoding: UTF-8
+      string: '[{"key":"X5VYN8C8","version":0,"itemType":"journalArticle","tags":[],"journalAbbreviation":"Int
+        J Gynecol Cancer","publicationTitle":"International Journal of Gynecological
+        Cancer","ISSN":["1048-891X"],"abstractNote":"Supplemental digital content
+        is available in the text., The first joint European Society for Medical Oncology
+        (ESMO), European SocieTy for Radiotherapy & Oncology (ESTRO) and European
+        Society of Gynaecological Oncology (ESGO) consensus conference on endometrial
+        cancer was held on 11–13 December 2014 in Milan, Italy, and comprised a multidisciplinary
+        panel of 40 leading experts in the management of endometrial cancer. Before
+        the conference, the expert panel prepared three clinically-relevant questions
+        about endometrial cancer relating to the following four areas: prevention
+        and screening, surgery, adjuvant treatment and advanced and recurrent disease.
+        All relevant scientific literature, as identified by the experts, was reviewed
+        in advance. During the consensus conference, the panel developed recommendations
+        for each specific question and a consensus was reached. Results of this consensus
+        conference, together with a summary of evidence supporting each recommendation,
+        are detailed in this article. All participants have approved this final article.","DOI":"10.1097/IGC.0000000000000609","extra":"PMID:
+        26645990\nPMCID: PMC4679344","title":"ESMO-ESGO-ESTRO Consensus Conference
+        on Endometrial Cancer","volume":"26","issue":"1","pages":"2–30","date":"2016-1","url":"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4679344/","libraryCatalog":"PubMed
+        Central","accessDate":"2019-02-07","author":[["Nicoletta","Colombo"],["Carien","Creutzberg"],["Frederic","Amant"],["Tjalling","Bosse"],["Antonio","González-Martín"],["Jonathan","Ledermann"],["Christian","Marth"],["Remi","Nout"],["Denis","Querleu"],["Mansoor
+        Raza","Mirza"],["Cristiana","Sessa"]],"PMID":"26645990","PMCID":"PMC4679344","source":["PubMed","Zotero"]}]'
+  recorded_at: 2019-02-07 00:25:44 GMT
+  recorded_with: vcr/0.2.2.9312, webmockr/0.3.1.9311
+- request:
+    method: get
+    uri: https://en.wikipedia.org/api/rest_v1/data/citation/mediawiki/1439895619
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.3 crul/0.7.0.9100 rOpenSci(rcitoid/0.0.2.9110)
+      X-USER-AGENT: r-curl/3.3 crul/0.7.0.9100 rOpenSci(rcitoid/0.0.2.9110)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      date: Thu, 07 Feb 2019 00:25:44 GMT
+      content-type: application/json; charset=utf-8
+      content-length: '515'
+      connection: keep-alive
+      access-control-allow-origin: '*'
+      access-control-allow-headers: accept, content-type, content-length, cache-control,
+        accept-language, api-user-agent, if-match, if-modified-since, if-none-match,
+        dnt, accept-encoding
+      access-control-expose-headers: etag
+      x-xss-protection: 1; mode=block
+      x-content-type-options: nosniff
+      x-frame-options: SAMEORIGIN
+      content-security-policy: default-src 'none'; frame-ancestors 'none'
+      x-content-security-policy: default-src 'none'; frame-ancestors 'none'
+      x-webkit-csp: default-src 'none'; frame-ancestors 'none'
+      content-location: https://en.wikipedia.org/api/rest_v1/data/citation/mediawiki/1439895619
+      access-control-allow-methods: GET,HEAD
+      referrer-policy: origin-when-cross-origin
+      cache-control: private, max-age=0, s-maxage=0, must-revalidate
+      x-request-id: e84dc210-2a6e-11e9-9df0-07b5e57dfa5a
+      server: restbase2018
+      vary: Accept-Encoding,X-Seven
+      x-varnish: 667599048, 454969492, 339676128
+      via: 1.1 varnish (Varnish/5.1), 1.1 varnish (Varnish/5.1), 1.1 varnish (Varnish/5.1)
+      accept-ranges: bytes
+      age: '0'
+      x-cache: cp2006 pass, cp4032 pass, cp4030 pass
+      x-cache-status: pass
+      server-timing: cache;desc="pass"
+      strict-transport-security: max-age=106384710; includeSubDomains; preload
+      x-analytics: WMF-Last-Access=07-Feb-2019;WMF-Last-Access-Global=07-Feb-2019;https=1
+      x-client-ip: 157.130.179.86
+    body:
+      encoding: UTF-8
+      string: '[{"itemType":"book","title":"Agroecology : the ecology of sustainable
+        food systems","oclc":"744303838","url":"https://www.worldcat.org/oclc/744303838","ISBN":["9781439895610","1439895619"],"edition":"Third
+        edition","place":"Boca Raton","numPages":"xvii, 371 pages, 16 unnumbered pages
+        of plates","abstractNote":"Resource added for the Sustainable Food & Agriculture
+        Systems program 100903","contributor":[["Engles,","Eric,"]],"author":[["Gliessman,
+        Stephen","R.,"]],"accessDate":"2019-02-07","source":["WorldCat"]}]'
+  recorded_at: 2019-02-07 00:25:44 GMT
+  recorded_with: vcr/0.2.2.9312, webmockr/0.3.1.9311

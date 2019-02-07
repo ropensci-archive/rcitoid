@@ -17,7 +17,7 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      date: Thu, 07 Feb 2019 00:23:44 GMT
+      date: Thu, 07 Feb 2019 00:32:36 GMT
       content-type: application/json; charset=utf-8
       content-length: '1097'
       connection: keep-alive
@@ -36,15 +36,15 @@ http_interactions:
       access-control-allow-methods: GET,HEAD
       referrer-policy: origin-when-cross-origin
       cache-control: private, max-age=0, s-maxage=0, must-revalidate
-      x-request-id: a002d4a0-2a6e-11e9-987d-48bd57b67daf
-      server: restbase2007
+      x-request-id: dd7b69e0-2a6f-11e9-8115-b0f51fd08a0d
+      server: restbase2010
       vary: Accept-Encoding,X-Seven
       content-encoding: gzip
-      x-varnish: 738814090, 1054162567, 340198798
+      x-varnish: 752075617, 926077285, 342040514
       via: 1.1 varnish (Varnish/5.1), 1.1 varnish (Varnish/5.1), 1.1 varnish (Varnish/5.1)
       accept-ranges: bytes
       age: '0'
-      x-cache: cp2004 pass, cp4031 pass, cp4030 pass
+      x-cache: cp2004 pass, cp4029 pass, cp4030 pass
       x-cache-status: pass
       server-timing: cache;desc="pass"
       strict-transport-security: max-age=106384710; includeSubDomains; preload
@@ -52,7 +52,7 @@ http_interactions:
       x-client-ip: 157.130.179.86
     body:
       encoding: UTF-8
-      string: '[{"key":"5QJHUMCC","version":0,"itemType":"journalArticle","tags":[],"title":"Enhanced
+      string: '[{"key":"9U7J97GK","version":0,"itemType":"journalArticle","tags":[],"title":"Enhanced
         protection conferred by mucosal BCG vaccination associates with presence of
         antigen-specific lung tissue-resident PD-1+ KLRG1- CD4+ T cells","ISSN":["1935-3456"],"journalAbbreviation":"Mucosal
         Immunol","publicationTitle":"Mucosal Immunology","date":"2018-11-16","abstractNote":"BCG,
@@ -78,5 +78,5 @@ http_interactions:
         CD4+ T cells.","DOI":"10.1038/s41385-018-0109-1","extra":"PMID: 30446726","libraryCatalog":"PubMed","url":"https://www.ncbi.nlm.nih.gov/pubmed/30446726","accessDate":"2019-02-07","author":[["N.
         C.","Bull"],["E.","Stylianou"],["D. A.","Kaveh"],["N.","Pinpathomrat"],["J.","Pasricha"],["R.","Harrington-Kandt"],["M.
         C.","Garcia-Pelayo"],["P. J.","Hogarth"],["H.","McShane"]],"PMID":"30446726","source":["Zotero"]}]'
-  recorded_at: 2019-02-07 00:23:44 GMT
+  recorded_at: 2019-02-07 00:32:36 GMT
   recorded_with: vcr/0.2.2.9312, webmockr/0.3.1.9311

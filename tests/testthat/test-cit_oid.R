@@ -64,6 +64,21 @@ test_that("cit_oid PMCID", {
 })
 
 
+context("cit_oid: many ids")
+test_that("cit_oid many ids", {
+  vcr::use_cassette("cit_oid_many_ids", {
+    x <- cit_oid(id = c(pmid1, pmcid1, isbn1))
+  })
+
+  expect_is(x, "list")
+  expect_equal(length(x), 3)
+  expect_named(x, NULL)
+  expect_is(x[[1]], "list")
+  expect_is(x[[2]], "list")
+  expect_is(x[[3]], "list")
+})
+
+
 
 test_that("cit_oid fails well", {
   expect_error(cit_oid(), "argument \"id\" is missing")

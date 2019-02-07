@@ -4,11 +4,11 @@
 \name{rcitoid-package}
 \alias{rcitoid-package}
 \alias{rcitoid}
-\title{Client for the Open Citations Corpus \url{http://opencitations.net/}}
+\title{Client for Citoid (\url{https://www.mediawiki.org/wiki/Citoid})}
 \description{
-Client for the Open Citations Corpus \url{http://opencitations.net/}
+Client for Citoid (\url{https://www.mediawiki.org/wiki/Citoid})
 }
 \author{
-Scott Chamberlain \email{myrmecocystus@gmail.com}
+Scott Chamberlain \email{sckott@protonmail.com}
 }
 \keyword{package}

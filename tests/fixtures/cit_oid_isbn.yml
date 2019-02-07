@@ -7,9 +7,9 @@ http_interactions:
       string: ''
     headers:
       Accept-Encoding: gzip, deflate
-      User-Agent: r-curl/3.3 crul/0.7.0.9100 rOpenSci(rcitoid/0.0.1.9110)
-      X-USER-AGENT: r-curl/3.3 crul/0.7.0.9100 rOpenSci(rcitoid/0.0.1.9110)
-      Accept: application/json; charset=utf-8
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.3 crul/0.7.0.9100 rOpenSci(rcitoid/0.0.2.9110)
+      X-USER-AGENT: r-curl/3.3 crul/0.7.0.9100 rOpenSci(rcitoid/0.0.2.9110)
   response:
     status:
       status_code: '200'
@@ -17,7 +17,7 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      date: Sat, 02 Feb 2019 01:02:28 GMT
+      date: Thu, 07 Feb 2019 00:23:44 GMT
       content-type: application/json; charset=utf-8
       content-length: '515'
       connection: keep-alive
@@ -36,18 +36,18 @@ http_interactions:
       access-control-allow-methods: GET,HEAD
       referrer-policy: origin-when-cross-origin
       cache-control: private, max-age=0, s-maxage=0, must-revalidate
-      x-request-id: 35ee8cd0-2686-11e9-95c6-ef839cab608c
-      server: restbase2011
+      x-request-id: a104b440-2a6e-11e9-a20a-dde167a82e51
+      server: restbase2009
       vary: Accept-Encoding,X-Seven
-      x-varnish: 812930504, 705300893, 927380872
+      x-varnish: 742038256, 1055627227, 335328263
       via: 1.1 varnish (Varnish/5.1), 1.1 varnish (Varnish/5.1), 1.1 varnish (Varnish/5.1)
       accept-ranges: bytes
       age: '0'
-      x-cache: cp2019 pass, cp4029 pass, cp4030 pass
+      x-cache: cp2004 pass, cp4031 pass, cp4030 pass
       x-cache-status: pass
       server-timing: cache;desc="pass"
       strict-transport-security: max-age=106384710; includeSubDomains; preload
-      x-analytics: WMF-Last-Access=02-Feb-2019;WMF-Last-Access-Global=02-Feb-2019;https=1
+      x-analytics: WMF-Last-Access=07-Feb-2019;WMF-Last-Access-Global=07-Feb-2019;https=1
       x-client-ip: 157.130.179.86
     body:
       encoding: UTF-8
@@ -56,6 +56,6 @@ http_interactions:
         edition","place":"Boca Raton","numPages":"xvii, 371 pages, 16 unnumbered pages
         of plates","abstractNote":"Resource added for the Sustainable Food & Agriculture
         Systems program 100903","contributor":[["Engles,","Eric,"]],"author":[["Gliessman,
-        Stephen","R.,"]],"accessDate":"2019-02-02","source":["WorldCat"]}]'
-  recorded_at: 2019-02-02 01:02:28 GMT
-  recorded_with: vcr/0.2.2.9132, webmockr/0.3.0.9314
+        Stephen","R.,"]],"accessDate":"2019-02-07","source":["WorldCat"]}]'
+  recorded_at: 2019-02-07 00:23:45 GMT
+  recorded_with: vcr/0.2.2.9312, webmockr/0.3.1.9311

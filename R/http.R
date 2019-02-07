@@ -8,19 +8,19 @@ errs <- function(x) {
   }
 }
 
-oid_GET <- function(format, id, accept, accept_language, ...) {
+oid_GET <- function(format, id, accept_language, ...) {
   cli <- crul::HttpClient$new(
     oid_base,
     headers = cp(list(
       "User-Agent" = oid_ua(),
       "X-USER-AGENT" = oid_ua(),
-      "Accept" = accept,
       "Accept-Language" = accept_language
     )),
     opts = list(...)
   )
-  res <- cli$get(file.path(oid_path, format, id))
-  errs(res)
+  paths <- file.path(oid_path, format, id)
+  res <- lapply(paths, function(z) cli$get(z))
+  invisible(lapply(res, errs))
   return(res)
 }
 

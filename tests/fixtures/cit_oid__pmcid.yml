@@ -17,9 +17,9 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      date: Thu, 07 Feb 2019 00:23:50 GMT
+      date: Thu, 07 Feb 2019 00:32:43 GMT
       content-type: application/json; charset=utf-8
-      content-length: '1083'
+      content-length: '1084'
       connection: keep-alive
       access-control-allow-origin: '*'
       access-control-allow-headers: accept, content-type, content-length, cache-control,
@@ -36,15 +36,15 @@ http_interactions:
       access-control-allow-methods: GET,HEAD
       referrer-policy: origin-when-cross-origin
       cache-control: private, max-age=0, s-maxage=0, must-revalidate
-      x-request-id: a2f9cd80-2a6e-11e9-bc10-b7cd2dc55de1
+      x-request-id: e06b84f0-2a6f-11e9-a05e-3a198d6a0dbc
       server: restbase2007
       vary: Accept-Encoding,X-Seven
       content-encoding: gzip
-      x-varnish: 665440552, 900524270, 333673565
+      x-varnish: 711678111, 919756696, 342134149
       via: 1.1 varnish (Varnish/5.1), 1.1 varnish (Varnish/5.1), 1.1 varnish (Varnish/5.1)
       accept-ranges: bytes
       age: '0'
-      x-cache: cp2006 pass, cp4028 pass, cp4030 pass
+      x-cache: cp2007 pass, cp4029 pass, cp4030 pass
       x-cache-status: pass
       server-timing: cache;desc="pass"
       strict-transport-security: max-age=106384710; includeSubDomains; preload
@@ -52,7 +52,7 @@ http_interactions:
       x-client-ip: 157.130.179.86
     body:
       encoding: UTF-8
-      string: '[{"key":"XIJL2344","version":0,"itemType":"journalArticle","tags":[],"journalAbbreviation":"Int
+      string: '[{"key":"ESNZGZNB","version":0,"itemType":"journalArticle","tags":[],"journalAbbreviation":"Int
         J Gynecol Cancer","publicationTitle":"International Journal of Gynecological
         Cancer","ISSN":["1048-891X"],"abstractNote":"Supplemental digital content
         is available in the text., The first joint European Society for Medical Oncology
@@ -72,5 +72,5 @@ http_interactions:
         on Endometrial Cancer","volume":"26","issue":"1","pages":"2–30","date":"2016-1","url":"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4679344/","libraryCatalog":"PubMed
         Central","accessDate":"2019-02-07","author":[["Nicoletta","Colombo"],["Carien","Creutzberg"],["Frederic","Amant"],["Tjalling","Bosse"],["Antonio","González-Martín"],["Jonathan","Ledermann"],["Christian","Marth"],["Remi","Nout"],["Denis","Querleu"],["Mansoor
         Raza","Mirza"],["Cristiana","Sessa"]],"PMID":"26645990","PMCID":"PMC4679344","source":["PubMed","Zotero"]}]'
-  recorded_at: 2019-02-07 00:23:50 GMT
+  recorded_at: 2019-02-07 00:32:43 GMT
   recorded_with: vcr/0.2.2.9312, webmockr/0.3.1.9311

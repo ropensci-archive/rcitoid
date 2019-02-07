@@ -5,8 +5,8 @@
   ],
   "@type": "SoftwareSourceCode",
   "identifier": "rcitoid",
-  "description": "Client for Citoid (<https://www.mediawiki.org/wiki/Citoid>).",
-  "name": "rcitoid: Client for Citoid",
+  "description": "Client for 'Citoid' (<https://www.mediawiki.org/wiki/Citoid>),\n    an API for getting citations for various scholarly work identifiers\n    found on 'Wikipedia'.",
+  "name": "rcitoid: Client for 'Citoid'",
   "codeRepository": "https://github.com/ropenscilabs/rcitoid",
   "issueTracker": "https://github.com/ropenscilabs/rcitoid/issues",
   "license": "https://spdx.org/licenses/MIT",
@@ -102,7 +102,7 @@
     }
   ],
   "readme": "https://github.com/ropenscilabs/rcitoid/blob/master/README.md",
-  "fileSize": "6.06KB",
+  "fileSize": "6.211KB",
   "contIntegration": [
     "https://travis-ci.com/ropenscilabs/rcitoid",
     "https://ci.appveyor.com/project/sckott/rcitoid"

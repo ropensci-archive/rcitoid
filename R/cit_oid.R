@@ -70,7 +70,6 @@ cit_oid_ <- function(id, format = "mediawiki", accept_language = NULL, ...) {
   if (!format %in% oid_formats) {
     stop("'format' must be one of: ", paste0(oid_formats, collapse = ", "))
   }
-  # x <- oid_GET(format, curl::curl_escape(id), accept_language, ...)
   x <- oid_GET_async(format, curl::curl_escape(id), accept_language, ...)
   lapply(x, function(w) structure(w$parse("UTF-8"), type = get_ctype(w)))
 }

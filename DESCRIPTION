@@ -1,7 +1,9 @@
 Package: rcitoid
 Type: Package
-Title: Client for Citoid
-Description: Client for Citoid (<https://www.mediawiki.org/wiki/Citoid>).
+Title: Client for 'Citoid'
+Description: Client for 'Citoid' (<https://www.mediawiki.org/wiki/Citoid>),
+    an API for getting citations for various scholarly work identifiers
+    found on 'Wikipedia'.
 Version: 0.1.0
 Authors@R: person("Scott", "Chamberlain", role = c("aut", "cre"),
     email = "sckott@protonmail.com", 

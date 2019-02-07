@@ -10,7 +10,7 @@
   "codeRepository": "https://github.com/ropenscilabs/rcitoid",
   "issueTracker": "https://github.com/ropenscilabs/rcitoid/issues",
   "license": "https://spdx.org/licenses/MIT",
-  "version": "0.0.2.9110",
+  "version": "0.1.0",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
@@ -48,18 +48,6 @@
         "url": "https://cran.r-project.org"
       },
       "sameAs": "https://CRAN.R-project.org/package=testthat"
-    },
-    {
-      "@type": "SoftwareApplication",
-      "identifier": "vcr",
-      "name": "vcr",
-      "provider": {
-        "@id": "https://cran.r-project.org",
-        "@type": "Organization",
-        "name": "Comprehensive R Archive Network (CRAN)",
-        "url": "https://cran.r-project.org"
-      },
-      "sameAs": "https://CRAN.R-project.org/package=vcr"
     }
   ],
   "softwareRequirements": [
@@ -114,7 +102,7 @@
     }
   ],
   "readme": "https://github.com/ropenscilabs/rcitoid/blob/master/README.md",
-  "fileSize": "9.633KB",
+  "fileSize": "6.06KB",
   "contIntegration": [
     "https://travis-ci.com/ropenscilabs/rcitoid",
     "https://ci.appveyor.com/project/sckott/rcitoid"
@@ -122,5 +110,6 @@
   "developmentStatus": "https://www.repostatus.org/#wip",
   "keywords": ["text-ming", "literature", "publications", "citations", "Wikipedia", "Wikicite", "Citoid", "r", "rstats", "api-client", "wikimedia", "citoid", "doi", "pmid", "pmcid", "isbn"],
   "applicationCategory": "Literature",
-  "isPartOf": "https://ropensci.org"
+  "isPartOf": "https://ropensci.org",
+  "releaseNotes": "https://github.com/ropenscilabs/rcitoid/blob/master/NEWS.md"
 }

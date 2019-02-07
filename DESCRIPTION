@@ -2,7 +2,7 @@ Package: rcitoid
 Type: Package
 Title: Client for Citoid
 Description: Client for Citoid (<https://www.mediawiki.org/wiki/Citoid>).
-Version: 0.0.3.9110
+Version: 0.1.0
 Authors@R: person("Scott", "Chamberlain", role = c("aut", "cre"),
     email = "sckott@protonmail.com", 
     comment = c(ORCID = "0000-0003-1444-9135"))

@@ -33,6 +33,12 @@ Get Citoid data
 parses the text as appropriate for the type
 }
 \examples{
+url<-"https://en.wikipedia.org/api/rest_v1/data/citation/mediawiki/30446726"
+if (crul::ok(url)) {
+  pmid1 <- 30446726
+  cit_oid(pmid1)
+}
+
 \dontrun{
 doi1 <- "10.1108/jd-12-2013-0166"
 doi2 <- "10.1371/journal.pone.0058568"

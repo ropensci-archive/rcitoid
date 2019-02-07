@@ -2,7 +2,7 @@ Package: rcitoid
 Type: Package
 Title: Client for Citoid
 Description: Client for Citoid (<https://www.mediawiki.org/wiki/Citoid>).
-Version: 0.0.2.9110
+Version: 0.0.3.9110
 Authors@R: person("Scott", "Chamberlain", role = c("aut", "cre"),
     email = "sckott@protonmail.com", 
     comment = c(ORCID = "0000-0003-1444-9135"))
@@ -17,8 +17,7 @@ Imports:
     fauxpas,
     jsonlite
 Suggests:
-    testthat,
-    vcr
+    testthat
 RoxygenNote: 6.1.1
 X-schema.org-applicationCategory: Literature
 X-schema.org-keywords: text-ming, literature, publications, citations, Wikipedia, Wikicite, Citoid

@@ -2,7 +2,8 @@
 
 export(cit_oid)
 export(cit_oid_)
-importFrom(crul,HttpClient)
+importFrom(crul,AsyncVaried)
+importFrom(crul,HttpRequest)
 importFrom(curl,curl_escape)
 importFrom(fauxpas,find_error_class)
 importFrom(fauxpas,http)

@@ -5,9 +5,7 @@ isbn1 <- 1439895619
 
 context("cit_oid_: DOI")
 test_that("cit_oid_ DOI", {
-  vcr::use_cassette("cit_oid__doi", {
-    x <- cit_oid_(doi1)
-  })
+  x <- cit_oid_(doi1)
 
   expect_is(x, "list")
   expect_is(x[[1]], "character")
@@ -19,9 +17,7 @@ test_that("cit_oid_ DOI", {
 
 context("cit_oid_: PMID")
 test_that("cit_oid_ PMID", {
-  vcr::use_cassette("cit_oid__pmid", {
-    x <- cit_oid_(pmid1)
-  })
+  x <- cit_oid_(pmid1)
 
   expect_is(x, "list")
   expect_is(x[[1]], "character")
@@ -34,9 +30,7 @@ test_that("cit_oid_ PMID", {
 
 context("cit_oid_: ISBN")
 test_that("cit_oid_ ISBN", {
-  vcr::use_cassette("cit_oid__isbn", {
-    x <- cit_oid_(isbn1)
-  })
+  x <- cit_oid_(isbn1)
 
   expect_is(x, "list")
   expect_is(x[[1]], "character")
@@ -48,9 +42,7 @@ test_that("cit_oid_ ISBN", {
 
 context("cit_oid_: PMCID")
 test_that("cit_oid_ PMCID", {
-  vcr::use_cassette("cit_oid__pmcid", {
-    x <- cit_oid_(pmcid1)
-  })
+  x <- cit_oid_(pmcid1)
 
   expect_is(x, "list")
   expect_is(x[[1]], "character")
@@ -65,9 +57,7 @@ test_that("cit_oid_ PMCID", {
 
 context("cit_oid_: many ids")
 test_that("cit_oid_ many ids", {
-  vcr::use_cassette("cit_oid__many_ids", {
-    x <- cit_oid_(id = c(pmid1, pmcid1, isbn1))
-  })
+  x <- cit_oid_(id = c(pmid1, pmcid1, isbn1))
   
   expect_equal(length(x), 3)
   expect_is(x, "list")

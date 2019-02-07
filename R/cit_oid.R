@@ -9,8 +9,9 @@
 #' @param ... curl options passed on to [crul::verb-GET]
 #' @details `cit_oid_()` gets raw text (either bibtex or JSON), and `cit_oid()`
 #' parses the text as appropriate for the type
-#' @return data.frame, see http://opencitations.net/index/coci/api/v1 for
-#' explanation of the resulting columns
+#' @return list of lists or character, see
+#' http://opencitations.net/index/coci/api/v1 for explanation of the resulting
+#' columns
 #' @references https://en.wikipedia.org/api/rest_v1/#!/Citation/getCitation,
 #' https://www.mediawiki.org/wiki/Citoid
 #' @examples \dontrun{

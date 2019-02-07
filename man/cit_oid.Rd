@@ -21,8 +21,9 @@ the accept language value, so provide it if localized content is required}
 \item{...}{curl options passed on to \link[crul:verb-GET]{crul::verb-GET}}
 }
 \value{
-data.frame, see http://opencitations.net/index/coci/api/v1 for
-explanation of the resulting columns
+list of lists or character, see
+http://opencitations.net/index/coci/api/v1 for explanation of the resulting
+columns
 }
 \description{
 Get Citoid data

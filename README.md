@@ -4,9 +4,8 @@ rcitoid
 [![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
 [![Build Status](https://travis-ci.com/ropenscilabs/rcitoid.svg?branch=master)](https://travis-ci.com/ropenscilabs/rcitoid)
 [![Build status](https://ci.appveyor.com/api/projects/status/yk8vpcdr1rmi7byy?svg=true)](https://ci.appveyor.com/project/sckott/rcitoid)
-[![codecov](https://codecov.io/gh/ropensci/rcitoid/branch/master/graph/badge.svg)](https://codecov.io/gh/ropensci/rcitoid)
+[![codecov](https://codecov.io/gh/ropenscilabs/rcitoid/branch/master/graph/badge.svg)](https://codecov.io/gh/ropenscilabs/rcitoid)
 [![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/rcitoid)](https://github.com/metacran/cranlogs.app)
-[![cran version](https://www.r-pkg.org/badges/version/rcitoid)](https://cran.r-project.org/package=rcitoid)
 
 
 
@@ -24,6 +23,13 @@ Even with `cit_oid()` though, you get a list of lists, and you may
 want to parse it to a data.frame. See an example below.
 
 ## Install
+
+Stable version
+
+```{r eval=FALSE}
+install.packages("rcitoid")
+```
+
 
 Development version
 
@@ -48,7 +54,7 @@ use underscore method to get text
 ```r
 cit_oid_("10.1108/jd-12-2013-0166")
 #> [[1]]
-#> [1] "[{\"key\":\"D7K4PWH4\",\"version\":0,\"itemType\":\"webpage\",\"url\":\"https://www.emeraldinsight.com/action/captchaChallenge?redirectUrl=https%3A%2F%2Fwww.emeraldinsight.com%2Fdoi%2Fabs%2F10.1108%2FJD-12-2013-0166&\",\"title\":\"EmeraldInsight\",\"accessDate\":\"2019-02-07\",\"websiteTitle\":\"www.emeraldinsight.com\",\"DOI\":\"10.1108/jd-12-2013-0166\",\"source\":[\"Zotero\"]}]"
+#> [1] "[{\"key\":\"6MJT5KS8\",\"version\":0,\"itemType\":\"webpage\",\"url\":\"https://www.emeraldinsight.com/action/captchaChallenge?redirectUrl=https%3A%2F%2Fwww.emeraldinsight.com%2Fdoi%2Fabs%2F10.1108%2FJD-12-2013-0166&\",\"title\":\"EmeraldInsight\",\"accessDate\":\"2019-02-07\",\"websiteTitle\":\"www.emeraldinsight.com\",\"DOI\":\"10.1108/jd-12-2013-0166\",\"source\":[\"Zotero\"]}]"
 #> attr(,"type")
 #> [1] "json"
 ```
@@ -62,7 +68,7 @@ DOI
 cit_oid("10.1108/jd-12-2013-0166")
 #> [[1]]
 #> [[1]]$key
-#> [1] "XMNAGHYW"
+#> [1] "LH2YV53X"
 #> 
 #> [[1]]$version
 #> [1] 0
@@ -80,7 +86,7 @@ PMID
 cit_oid(30446726)
 #> [[1]]
 #> [[1]]$key
-#> [1] "D8NZY5CY"
+#> [1] "M5TVWR6J"
 #> 
 #> [[1]]$version
 #> [1] 0
@@ -98,7 +104,7 @@ PMCID
 cit_oid("PMC4679344")
 #> [[1]]
 #> [[1]]$key
-#> [1] "6SZW3VCH"
+#> [1] "TCAHDCFP"
 #> 
 #> [[1]]$version
 #> [1] 0
@@ -147,25 +153,25 @@ tbl_df(bind_rows(lapply(res, jsonlite::fromJSON)))
 #> # A tibble: 13 x 33
 #>    key   version itemType tags  title ISSN  journalAbbrevia…
 #>    <chr>   <int> <chr>    <lis> <chr> <lis> <chr>           
-#>  1 3XQ4…       0 journal… <lis… Enha… <chr… Mucosal Immunol 
-#>  2 TD5Z…       0 journal… <lis… Shar… <chr… Mol. Biol. Evol.
-#>  3 PU48…       0 webpage  <lis… Resp… <NUL… <NA>            
-#>  4 J9S3…       0 journal… <dat… A mi… <chr… Integr Zool     
-#>  5 RH77…       0 journal… <lis… ESMO… <NUL… <NA>            
-#>  6 ZPV3…       0 journal… <lis… Effi… <NUL… <NA>            
-#>  7 T2TI…       0 journal… <lis… Iden… <chr… J Hematol Oncol 
+#>  1 23YF…       0 journal… <lis… Enha… <chr… Mucosal Immunol 
+#>  2 QJ6Z…       0 journal… <lis… Shar… <chr… Mol. Biol. Evol.
+#>  3 VEBC…       0 journal… <dat… Resp… <chr… Front Plant Sci 
+#>  4 IBDH…       0 journal… <dat… A mi… <chr… Integr Zool     
+#>  5 WPYN…       0 journal… <lis… ESMO… <NUL… <NA>            
+#>  6 6R5T…       0 journal… <lis… Effi… <chr… J Orthop Surg R…
+#>  7 GU4E…       0 journal… <lis… Iden… <chr… J Hematol Oncol 
 #>  8 <NA>       NA book     <NUL… Agro… <NUL… <NA>            
-#>  9 KRG7…       0 journal… <dat… Anti… <chr… <NA>            
-#> 10 42KK…       0 journal… <dat… The … <chr… Biol Cybern     
-#> 11 VGSF…       0 webpage  <lis… Bahm… <NUL… <NA>            
-#> 12 J484…       0 confere… <dat… Desi… <NUL… <NA>            
-#> 13 B2V6…       0 confere… <dat… Traf… <NUL… <NA>            
+#>  9 NFGJ…       0 journal… <dat… Anti… <chr… <NA>            
+#> 10 J7FD…       0 journal… <dat… The … <chr… Biol Cybern     
+#> 11 ACWN…       0 webpage  <lis… Bahm… <NUL… <NA>            
+#> 12 8G39…       0 confere… <dat… Desi… <NUL… <NA>            
+#> 13 EVQU…       0 confere… <dat… Traf… <NUL… <NA>            
 #> # … with 26 more variables: publicationTitle <chr>, date <chr>,
 #> #   abstractNote <chr>, DOI <chr>, extra <chr>, libraryCatalog <chr>,
 #> #   url <chr>, accessDate <chr>, author <list>, PMID <chr>, source <list>,
-#> #   language <chr>, shortTitle <chr>, websiteTitle <chr>, PMCID <chr>,
-#> #   volume <chr>, issue <chr>, pages <chr>, oclc <chr>, ISBN <list>,
-#> #   edition <chr>, place <chr>, numPages <chr>, contributor <list>,
+#> #   pages <chr>, volume <chr>, shortTitle <chr>, PMCID <chr>,
+#> #   language <chr>, issue <chr>, oclc <chr>, ISBN <list>, edition <chr>,
+#> #   place <chr>, numPages <chr>, contributor <list>, websiteTitle <chr>,
 #> #   proceedingsTitle <chr>, conferenceName <chr>
 ```
 

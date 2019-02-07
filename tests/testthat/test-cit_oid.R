@@ -5,6 +5,7 @@ isbn1 <- 1439895619
 
 context("cit_oid: DOI")
 test_that("cit_oid DOI", {
+  skip_on_cran()
   x <- cit_oid(doi1)
 
   expect_is(x, "list")
@@ -16,6 +17,7 @@ test_that("cit_oid DOI", {
 
 context("cit_oid: PMID")
 test_that("cit_oid PMID", {
+  skip_on_cran()
   x <- cit_oid(pmid1)
 
   expect_is(x, "list")
@@ -28,6 +30,7 @@ test_that("cit_oid PMID", {
 
 context("cit_oid: ISBN")
 test_that("cit_oid ISBN", {
+  skip_on_cran()
   x <- cit_oid(isbn1)
 
   expect_is(x, "list")
@@ -42,6 +45,7 @@ test_that("cit_oid ISBN", {
 
 context("cit_oid: PMCID")
 test_that("cit_oid PMCID", {
+  skip_on_cran()
   x <- cit_oid(pmcid1)
 
   expect_is(x, "list")
@@ -58,6 +62,7 @@ test_that("cit_oid PMCID", {
 
 context("cit_oid: many ids")
 test_that("cit_oid many ids", {
+  skip_on_cran()
   x <- cit_oid(id = c(pmid1, pmcid1, isbn1))
 
   expect_is(x, "list")

@@ -2,6 +2,23 @@ language: r
 sudo: false
 cache: packages
 
+matrix:
+  include:
+    - os: linux
+      r: oldrel
+    - os: linux
+      r: release
+      env: R_CODECOV=true
+    - os: linux
+      r: devel
+      env: _R_CHECK_LENGTH_1_LOGIC2_=TRUE
+
+r_binary_packages:
+  - covr
+
+after_success:
+  - if [[ "${R_CODECOV}" ]]; then R -e 'covr::codecov()'; fi
+
 notifications:
   email:
     on_success: never

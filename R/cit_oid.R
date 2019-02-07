@@ -60,7 +60,7 @@ cit_oid <- function(id, format = "mediawiki", accept_language = NULL, ...) {
 }
 
 #' @export
-#' @rdaname cit_oid
+#' @rdname cit_oid
 cit_oid_ <- function(id, format = "mediawiki", accept_language = NULL, ...) {
   assert(id, c("character", "numeric", "integer"))
   assert(format, "character")

@@ -2,9 +2,12 @@
 % Please edit documentation in R/cit_oid.R
 \name{cit_oid}
 \alias{cit_oid}
+\alias{cit_oid_}
 \title{Get Citoid data}
 \usage{
 cit_oid(id, format = "mediawiki", accept_language = NULL, ...)
+
+cit_oid_(id, format = "mediawiki", accept_language = NULL, ...)
 }
 \arguments{
 \item{id}{(character) id of an article, DOI, ISBN, PMCID or PMID}

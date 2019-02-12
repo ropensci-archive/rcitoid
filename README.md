@@ -2,10 +2,12 @@ rcitoid
 =========
 
 [![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
+[![cran checks](https://cranchecks.info/badges/worst/rcitoid)](https://cranchecks.info/pkgs/rcitoid)
 [![Build Status](https://travis-ci.com/ropenscilabs/rcitoid.svg?branch=master)](https://travis-ci.com/ropenscilabs/rcitoid)
 [![Build status](https://ci.appveyor.com/api/projects/status/yk8vpcdr1rmi7byy?svg=true)](https://ci.appveyor.com/project/sckott/rcitoid)
 [![codecov](https://codecov.io/gh/ropenscilabs/rcitoid/branch/master/graph/badge.svg)](https://codecov.io/gh/ropenscilabs/rcitoid)
 [![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/rcitoid)](https://github.com/metacran/cranlogs.app)
+[![cran version](https://www.r-pkg.org/badges/version/rcitoid)](https://cran.r-project.org/package=rcitoid)
 
 
 
@@ -26,10 +28,10 @@ want to parse it to a data.frame. See an example below.
 
 Stable version
 
-```{r eval=FALSE}
+
+```r
 install.packages("rcitoid")
 ```
-
 
 Development version
 
@@ -54,7 +56,7 @@ use underscore method to get text
 ```r
 cit_oid_("10.1108/jd-12-2013-0166")
 #> [[1]]
-#> [1] "[{\"key\":\"6MJT5KS8\",\"version\":0,\"itemType\":\"webpage\",\"url\":\"https://www.emeraldinsight.com/action/captchaChallenge?redirectUrl=https%3A%2F%2Fwww.emeraldinsight.com%2Fdoi%2Fabs%2F10.1108%2FJD-12-2013-0166&\",\"title\":\"EmeraldInsight\",\"accessDate\":\"2019-02-07\",\"websiteTitle\":\"www.emeraldinsight.com\",\"DOI\":\"10.1108/jd-12-2013-0166\",\"source\":[\"Zotero\"]}]"
+#> [1] "[{\"key\":\"T4RDAMPU\",\"version\":0,\"itemType\":\"journalArticle\",\"tags\":[],\"publicationTitle\":\"Journal of Documentation\",\"volume\":\"71\",\"issue\":\"2\",\"language\":\"en\",\"ISSN\":[\"0022-0418\"],\"date\":\"2015-03-09\",\"pages\":\"253–277\",\"DOI\":\"10.1108/JD-12-2013-0166\",\"url\":\"http://www.emeraldinsight.com/doi/10.1108/JD-12-2013-0166\",\"title\":\"Setting our bibliographic references free: towards open citation data\",\"libraryCatalog\":\"Crossref\",\"accessDate\":\"2019-02-12\",\"shortTitle\":\"Setting our bibliographic references free\",\"author\":[[\"Silvio\",\"Peroni\"],[\"Alexander\",\"Dutton\"],[\"Tanya\",\"Gray\"],[\"David\",\"Shotton\"]],\"source\":[\"Zotero\"]}]"
 #> attr(,"type")
 #> [1] "json"
 ```
@@ -68,13 +70,13 @@ DOI
 cit_oid("10.1108/jd-12-2013-0166")
 #> [[1]]
 #> [[1]]$key
-#> [1] "LH2YV53X"
+#> [1] "QJPWEUYT"
 #> 
 #> [[1]]$version
 #> [1] 0
 #> 
 #> [[1]]$itemType
-#> [1] "webpage"
+#> [1] "journalArticle"
 #> 
 ...
 ```
@@ -86,7 +88,7 @@ PMID
 cit_oid(30446726)
 #> [[1]]
 #> [[1]]$key
-#> [1] "M5TVWR6J"
+#> [1] "VRT3CWW3"
 #> 
 #> [[1]]$version
 #> [1] 0
@@ -104,7 +106,7 @@ PMCID
 cit_oid("PMC4679344")
 #> [[1]]
 #> [[1]]$key
-#> [1] "TCAHDCFP"
+#> [1] "VWJ6RJNE"
 #> 
 #> [[1]]$version
 #> [1] 0
@@ -150,28 +152,29 @@ dois <- c("10.1109/jsac.2011.110806", "10.1007/s00422-006-0078-4",
   "10.1109/wispnet.2017.8299996")
 res <- cit_oid_(id = c(pmid, pmcid, isbn, dois))
 tbl_df(bind_rows(lapply(res, jsonlite::fromJSON)))
-#> # A tibble: 13 x 33
+#> # A tibble: 13 x 35
 #>    key   version itemType tags  title ISSN  journalAbbrevia…
 #>    <chr>   <int> <chr>    <lis> <chr> <lis> <chr>           
-#>  1 23YF…       0 journal… <lis… Enha… <chr… Mucosal Immunol 
-#>  2 QJ6Z…       0 journal… <lis… Shar… <chr… Mol. Biol. Evol.
-#>  3 VEBC…       0 journal… <dat… Resp… <chr… Front Plant Sci 
-#>  4 IBDH…       0 journal… <dat… A mi… <chr… Integr Zool     
-#>  5 WPYN…       0 journal… <lis… ESMO… <NUL… <NA>            
-#>  6 6R5T…       0 journal… <lis… Effi… <chr… J Orthop Surg R…
-#>  7 GU4E…       0 journal… <lis… Iden… <chr… J Hematol Oncol 
+#>  1 X42G…       0 journal… <lis… Enha… <chr… Mucosal Immunol 
+#>  2 LNTZ…       0 journal… <lis… Shar… <chr… Mol. Biol. Evol.
+#>  3 ADUB…       0 journal… <dat… Resp… <chr… Front Plant Sci 
+#>  4 GDTL…       0 webpage  <lis… A mi… <NUL… <NA>            
+#>  5 EBZS…       0 journal… <lis… ESMO… <NUL… <NA>            
+#>  6 M4GB…       0 journal… <lis… Effi… <NUL… <NA>            
+#>  7 M3LT…       0 journal… <lis… Iden… <chr… J Hematol Oncol 
 #>  8 <NA>       NA book     <NUL… Agro… <NUL… <NA>            
-#>  9 NFGJ…       0 journal… <dat… Anti… <chr… <NA>            
-#> 10 J7FD…       0 journal… <dat… The … <chr… Biol Cybern     
-#> 11 ACWN…       0 webpage  <lis… Bahm… <NUL… <NA>            
-#> 12 8G39…       0 confere… <dat… Desi… <NUL… <NA>            
-#> 13 EVQU…       0 confere… <dat… Traf… <NUL… <NA>            
-#> # … with 26 more variables: publicationTitle <chr>, date <chr>,
+#>  9 BS3M…       0 journal… <lis… Anti… <chr… <NA>            
+#> 10 PNNM…       0 journal… <lis… The … <chr… <NA>            
+#> 11 WKX7…       0 book     <lis… The … <NUL… <NA>            
+#> 12 47LX…       0 journal… <lis… Desi… <NUL… <NA>            
+#> 13 QU6I…       0 confere… <lis… Traf… <NUL… <NA>            
+#> # … with 28 more variables: publicationTitle <chr>, date <chr>,
 #> #   abstractNote <chr>, DOI <chr>, extra <chr>, libraryCatalog <chr>,
 #> #   url <chr>, accessDate <chr>, author <list>, PMID <chr>, source <list>,
 #> #   pages <chr>, volume <chr>, shortTitle <chr>, PMCID <chr>,
-#> #   language <chr>, issue <chr>, oclc <chr>, ISBN <list>, edition <chr>,
-#> #   place <chr>, numPages <chr>, contributor <list>, websiteTitle <chr>,
+#> #   language <chr>, websiteTitle <chr>, issue <chr>, oclc <chr>,
+#> #   ISBN <list>, edition <chr>, place <chr>, numPages <chr>,
+#> #   contributor <list>, publisher <chr>, editor <list>,
 #> #   proceedingsTitle <chr>, conferenceName <chr>
 ```
 

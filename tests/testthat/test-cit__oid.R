@@ -1,8 +1,3 @@
-doi1 <- "10.1108/jd-12-2013-0166"
-pmid1 <- 30446726
-pmcid1 <- "PMC4679344"
-isbn1 <- 1439895619
-
 context("cit_oid_: DOI")
 test_that("cit_oid_ DOI", {
   skip_on_cran()
@@ -12,7 +7,7 @@ test_that("cit_oid_ DOI", {
   expect_is(x[[1]], "character")
   expect_is(attr(x[[1]], "type"), "character")
   expect_equal(attr(x[[1]], "type"), "json")
-  expect_match(x[[1]], doi1)
+  expect_match(tolower(x[[1]]), tolower(doi1))
 })
 
 

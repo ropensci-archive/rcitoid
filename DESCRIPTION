@@ -4,7 +4,7 @@ Title: Client for 'Citoid'
 Description: Client for 'Citoid' (<https://www.mediawiki.org/wiki/Citoid>),
     an API for getting citations for various scholarly work identifiers
     found on 'Wikipedia'.
-Version: 0.1.0.9100
+Version: 0.1.0.9101
 Authors@R: person("Scott", "Chamberlain", role = c("aut", "cre"),
     email = "sckott@protonmail.com", 
     comment = c(ORCID = "0000-0003-1444-9135"))

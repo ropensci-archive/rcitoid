@@ -1,8 +1,3 @@
-doi1 <- "10.1108/jd-12-2013-0166"
-pmid1 <- 30446726
-pmcid1 <- "PMC4679344"
-isbn1 <- 1439895619
-
 context("cit_oid: DOI")
 test_that("cit_oid DOI", {
   skip_on_cran()
@@ -11,7 +6,7 @@ test_that("cit_oid DOI", {
   expect_is(x, "list")
   expect_is(x[[1]]$key, "character")
   expect_is(x[[1]]$url, "character")
-  expect_equal(x[[1]]$DOI, doi1)
+  expect_equal(tolower(x[[1]]$DOI), tolower(doi1))
 })
 
 

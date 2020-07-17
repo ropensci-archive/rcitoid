@@ -20,7 +20,7 @@ Imports:
     jsonlite
 Suggests:
     testthat
-RoxygenNote: 6.1.1
+RoxygenNote: 7.1.1
 X-schema.org-applicationCategory: Literature
 X-schema.org-keywords: text-ming, literature, publications, citations, Wikipedia, Wikicite, Citoid
 X-schema.org-isPartOf: https://ropensci.org

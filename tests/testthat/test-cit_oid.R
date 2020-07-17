@@ -48,7 +48,7 @@ test_that("cit_oid PMCID", {
   expect_is(x[[1]]$url, "character")
   expect_equal(x[[1]]$DOI, "10.1097/IGC.0000000000000609")
   expect_equal(x[[1]]$PMID, "26645990")
-  expect_equal(x[[1]]$PMCID, pmcid1)
+  expect_true(grepl(x[[1]]$PMCID, pmcid1))
   expect_is(x[[1]]$author, "list")
   expect_is(x[[1]]$author[[1]], "list")
   expect_is(unlist(x[[1]]$author[[1]]), "character")

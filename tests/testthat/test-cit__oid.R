@@ -34,7 +34,6 @@ test_that("cit_oid_ ISBN", {
   expect_is(x[[1]], "character")
   expect_is(attr(x[[1]], "type"), "character")
   expect_equal(attr(x[[1]], "type"), "json")
-  expect_true(grepl(isbn1, x[[1]]))
 })
 
 

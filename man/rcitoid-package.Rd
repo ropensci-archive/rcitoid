@@ -4,7 +4,10 @@
 \name{rcitoid-package}
 \alias{rcitoid-package}
 \alias{rcitoid}
-\title{Client for Citoid (\url{https://www.mediawiki.org/wiki/Citoid})}
+\title{rcitoid}
+\description{
+Client for Citoid (\url{https://www.mediawiki.org/wiki/Citoid})
+}
 \author{
 Scott Chamberlain \email{sckott@protonmail.com}
 }

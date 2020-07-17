@@ -1,5 +1,5 @@
-#' Client for Citoid (<https://www.mediawiki.org/wiki/Citoid>)
-#'
+#' @title rcitoid
+#' @description Client for Citoid (<https://www.mediawiki.org/wiki/Citoid>)
 #' @importFrom curl curl_escape
 #' @importFrom fauxpas http find_error_class
 #' @importFrom jsonlite fromJSON

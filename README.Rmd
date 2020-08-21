@@ -3,9 +3,9 @@ rcitoid
 
 [![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
 [![cran checks](https://cranchecks.info/badges/worst/rcitoid)](https://cranchecks.info/pkgs/rcitoid)
-[![Build Status](https://travis-ci.com/ropenscilabs/rcitoid.svg?branch=master)](https://travis-ci.com/ropenscilabs/rcitoid)
+[![Build Status](https://travis-ci.com/ropensci/rcitoid.svg?branch=master)](https://travis-ci.com/ropensci/rcitoid)
 [![Build status](https://ci.appveyor.com/api/projects/status/yk8vpcdr1rmi7byy?svg=true)](https://ci.appveyor.com/project/sckott/rcitoid)
-[![codecov](https://codecov.io/gh/ropenscilabs/rcitoid/branch/master/graph/badge.svg)](https://codecov.io/gh/ropenscilabs/rcitoid)
+[![codecov](https://codecov.io/gh/ropensci/rcitoid/branch/master/graph/badge.svg)](https://codecov.io/gh/ropensci/rcitoid)
 [![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/rcitoid)](https://github.com/metacran/cranlogs.app)
 [![cran version](https://www.r-pkg.org/badges/version/rcitoid)](https://cran.r-project.org/package=rcitoid)
 
@@ -67,7 +67,7 @@ install.packages("rcitoid")
 Development version
 
 ```{r eval=FALSE}
-devtools::install_github("ropenscilabs/rcitoid")
+remotes::install_github("ropensci/rcitoid")
 ```
 
 Load the package
@@ -131,7 +131,7 @@ tbl_df(bind_rows(lapply(res, jsonlite::fromJSON)))
 
 ## Meta
 
-* Please [report any issues or bugs](https://github.com/ropenscilabs/rcitoid/issues)
+* Please [report any issues or bugs](https://github.com/ropensci/rcitoid/issues)
 * License: MIT
 * Get citation information for `rcitoid` in R doing `citation(package = 'rcitoid')`
 * Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.

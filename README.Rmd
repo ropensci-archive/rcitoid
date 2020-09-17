@@ -1,12 +1,12 @@
 rcitoid
 =========
 
-[![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
+[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![cran checks](https://cranchecks.info/badges/worst/rcitoid)](https://cranchecks.info/pkgs/rcitoid)
 [![Build Status](https://travis-ci.com/ropensci/rcitoid.svg?branch=master)](https://travis-ci.com/ropensci/rcitoid)
 [![Build status](https://ci.appveyor.com/api/projects/status/yk8vpcdr1rmi7byy?svg=true)](https://ci.appveyor.com/project/sckott/rcitoid)
 [![codecov](https://codecov.io/gh/ropensci/rcitoid/branch/master/graph/badge.svg)](https://codecov.io/gh/ropensci/rcitoid)
-[![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/rcitoid)](https://github.com/metacran/cranlogs.app)
+[![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/rcitoid)](https://github.com/r-hub/cranlogs.app)
 [![cran version](https://www.r-pkg.org/badges/version/rcitoid)](https://cran.r-project.org/package=rcitoid)
 
 
@@ -44,9 +44,9 @@ knitr::opts_chunk$set(
 )
 ```
 
-Client for the Citoid service <https://www.mediawiki.org/wiki/Citoid>
+Client for the Citoid service https://www.mediawiki.org/wiki/Citoid
 
-docs: <https://en.wikipedia.org/api/rest_v1/#!/Citation/getCitation>
+docs: https://en.wikipedia.org/api/rest_v1/#!/Citation/getCitation
 
 There are two functions, both of which do the same things, except:
 
@@ -134,7 +134,6 @@ tbl_df(bind_rows(lapply(res, jsonlite::fromJSON)))
 * Please [report any issues or bugs](https://github.com/ropensci/rcitoid/issues)
 * License: MIT
 * Get citation information for `rcitoid` in R doing `citation(package = 'rcitoid')`
-* Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
-
+* Please note that this package is released with a [Contributor Code of Conduct](https://ropensci.org/code-of-conduct/). By contributing to this project, you agree to abide by its terms.
 
 [![ropensci_footer](https://ropensci.org/public_images/github_footer.png)](https://ropensci.org)

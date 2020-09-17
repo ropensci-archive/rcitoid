@@ -1,20 +1,20 @@
 rcitoid
 =========
 
-[![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
+[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![cran checks](https://cranchecks.info/badges/worst/rcitoid)](https://cranchecks.info/pkgs/rcitoid)
 [![Build Status](https://travis-ci.com/ropensci/rcitoid.svg?branch=master)](https://travis-ci.com/ropensci/rcitoid)
 [![Build status](https://ci.appveyor.com/api/projects/status/yk8vpcdr1rmi7byy?svg=true)](https://ci.appveyor.com/project/sckott/rcitoid)
 [![codecov](https://codecov.io/gh/ropensci/rcitoid/branch/master/graph/badge.svg)](https://codecov.io/gh/ropensci/rcitoid)
-[![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/rcitoid)](https://github.com/metacran/cranlogs.app)
+[![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/rcitoid)](https://github.com/r-hub/cranlogs.app)
 [![cran version](https://www.r-pkg.org/badges/version/rcitoid)](https://cran.r-project.org/package=rcitoid)
 
 
 
 
-Client for the Citoid service <https://www.mediawiki.org/wiki/Citoid>
+Client for the Citoid service https://www.mediawiki.org/wiki/Citoid
 
-docs: <https://en.wikipedia.org/api/rest_v1/#!/Citation/getCitation>
+docs: https://en.wikipedia.org/api/rest_v1/#!/Citation/getCitation
 
 There are two functions, both of which do the same things, except:
 
@@ -56,7 +56,7 @@ use underscore method to get text
 ```r
 cit_oid_("10.1108/jd-12-2013-0166")
 #> [[1]]
-#> [1] "[{\"key\":\"FT9UZKHJ\",\"version\":0,\"itemType\":\"journalArticle\",\"tags\":[],\"publicationTitle\":\"Journal of Documentation\",\"journalAbbreviation\":\"Journal of Documentation\",\"volume\":\"71\",\"issue\":\"2\",\"language\":\"en\",\"ISSN\":[\"0022-0418\"],\"date\":\"2015-03-09\",\"pages\":\"253–277\",\"DOI\":\"10.1108/JD-12-2013-0166\",\"url\":\"https://www.emerald.com/insight/content/doi/10.1108/JD-12-2013-0166/full/html\",\"title\":\"Setting our bibliographic references free: towards open citation data\",\"libraryCatalog\":\"DOI.org (Crossref)\",\"accessDate\":\"2020-08-21\",\"shortTitle\":\"Setting our bibliographic references free\",\"author\":[[\"Silvio\",\"Peroni\"],[\"Alexander\",\"Dutton\"],[\"Tanya\",\"Gray\"],[\"David\",\"Shotton\"]],\"source\":[\"Zotero\"]}]"
+#> [1] "[{\"key\":\"6GCZU4NS\",\"version\":0,\"itemType\":\"journalArticle\",\"tags\":[],\"publicationTitle\":\"Journal of Documentation\",\"journalAbbreviation\":\"Journal of Documentation\",\"volume\":\"71\",\"issue\":\"2\",\"language\":\"en\",\"ISSN\":[\"0022-0418\"],\"date\":\"2015-03-09\",\"pages\":\"253–277\",\"DOI\":\"10.1108/JD-12-2013-0166\",\"url\":\"https://www.emerald.com/insight/content/doi/10.1108/JD-12-2013-0166/full/html\",\"title\":\"Setting our bibliographic references free: towards open citation data\",\"libraryCatalog\":\"DOI.org (Crossref)\",\"accessDate\":\"2020-09-17\",\"shortTitle\":\"Setting our bibliographic references free\",\"author\":[[\"Silvio\",\"Peroni\"],[\"Alexander\",\"Dutton\"],[\"Tanya\",\"Gray\"],[\"David\",\"Shotton\"]],\"source\":[\"Zotero\",\"Zotero\"]}]"
 #> attr(,"type")
 #> [1] "json"
 ```
@@ -70,7 +70,7 @@ DOI
 cit_oid("10.1108/jd-12-2013-0166")
 #> [[1]]
 #> [[1]]$key
-#> [1] "P6BT3HWI"
+#> [1] "YFQK7UCZ"
 #> 
 #> [[1]]$version
 #> [1] 0
@@ -88,7 +88,7 @@ PMID
 cit_oid(30446726)
 #> [[1]]
 #> [[1]]$key
-#> [1] "GISBR57K"
+#> [1] "R4A72DW5"
 #> 
 #> [[1]]$version
 #> [1] 0
@@ -106,7 +106,7 @@ PMCID
 cit_oid("PMC4679344")
 #> [[1]]
 #> [[1]]$key
-#> [1] "2P8YKQUX"
+#> [1] "VSJ5LSKX"
 #> 
 #> [[1]]$version
 #> [1] 0
@@ -130,7 +130,7 @@ cit_oid(1439895619)
 #> [1] "Agroecology : the ecology of sustainable food systems"
 #> 
 #> [[1]]$oclc
-#> [1] "744303838"
+#> [1] "908080219"
 #> 
 ...
 ```
@@ -152,29 +152,29 @@ dois <- c("10.1109/jsac.2011.110806", "10.1007/s00422-006-0078-4",
   "10.1109/wispnet.2017.8299996")
 res <- cit_oid_(id = c(pmid, pmcid, isbn, dois))
 tbl_df(bind_rows(lapply(res, jsonlite::fromJSON)))
-#> # A tibble: 13 x 35
+#> # A tibble: 13 x 34
 #>    key   version itemType tags  title websiteTitle url   abstractNote date 
 #>    <chr>   <int> <chr>    <lis> <chr> <chr>        <chr> <chr>        <chr>
-#>  1 F8YM…       0 webpage  <lis… Enha… Mucosal imm… http… "BCG, the o… 2019…
-#>  2 IA6Q…       0 journal… <df[… Shar… <NA>         http… "Sex determ… 06 0…
-#>  3 7L9A…       0 journal… <df[… Resp… <NA>         http… "With the i… 2018 
-#>  4 E9WC…       0 journal… <df[… Mixe… <NA>         http… "Medicinal … 2019…
-#>  5 E7UC…       0 journal… <lis… ESMO… <NA>         http… "Supplement… 2016…
-#>  6 96D4…       0 journal… <lis… Effi… <NA>         http… "Osteoarthr… 2019 
-#>  7 TUAC…       0 journal… <lis… Iden… <NA>         http… "Background… 2019…
-#>  8 <NA>       NA book     <NUL… Agro… <NA>         http… "Resource a… <NA> 
-#>  9 Q6PQ…       0 journal… <lis… Anti… <NA>         http…  <NA>        2011…
-#> 10 V5JS…       0 journal… <lis… The … <NA>         http…  <NA>        2006…
-#> 11 C2LI…       0 book     <lis… The … <NA>         <NA>   <NA>        2006 
-#> 12 QWZL…       0 confere… <df[… Desi… <NA>         http… "Testabilit… 2009…
-#> 13 9J6N…       0 confere… <lis… Traf… <NA>         http…  <NA>        2017…
-#> # … with 26 more variables: extra <chr>, language <chr>, accessDate <chr>,
+#>  1 TDF5…       0 webpage  <lis… Enha… Mucosal imm… http… "BCG, the o… 2019…
+#>  2 R2LH…       0 journal… <df[… Shar… <NA>         http… "Sex determ… 06 0…
+#>  3 YEQJ…       0 journal… <df[… Resp… <NA>         http… "With the i… 2018 
+#>  4 H4CX…       0 journal… <df[… Mixe… <NA>         http… "Medicinal … 2019…
+#>  5 NSWJ…       0 journal… <lis… ESMO… <NA>         http… "Supplement… 2016…
+#>  6 V3N3…       0 journal… <lis… Effi… <NA>         http… "Background… 2019…
+#>  7 NHLX…       0 journal… <lis… Iden… <NA>         http… "Background… 2019…
+#>  8 <NA>       NA book     <NUL… Agro… <NA>         http… "Providing … <NA> 
+#>  9 MBYX…       0 journal… <lis… Anti… <NA>         http…  <NA>        2011…
+#> 10 LTT6…       0 journal… <lis… The … <NA>         http…  <NA>        2006…
+#> 11 RJB8…       0 book     <lis… The … <NA>         <NA>   <NA>        2006 
+#> 12 U4EQ…       0 confere… <df[… Desi… <NA>         http… "Testabilit… 2009…
+#> 13 RDTJ…       0 confere… <lis… Traf… <NA>         http…  <NA>        2017…
+#> # … with 25 more variables: extra <chr>, language <chr>, accessDate <chr>,
 #> #   author <list>, PMID <chr>, PMCID <chr>, DOI <chr>, source <list>,
 #> #   pages <chr>, ISSN <list>, journalAbbreviation <chr>,
 #> #   publicationTitle <chr>, volume <chr>, issue <chr>, libraryCatalog <chr>,
-#> #   shortTitle <chr>, oclc <chr>, ISBN <list>, edition <chr>, place <chr>,
-#> #   numPages <chr>, contributor <list>, publisher <chr>, editor <list>,
-#> #   proceedingsTitle <chr>, conferenceName <chr>
+#> #   shortTitle <chr>, oclc <chr>, ISBN <list>, place <chr>, numPages <chr>,
+#> #   contributor <list>, publisher <chr>, editor <list>, proceedingsTitle <chr>,
+#> #   conferenceName <chr>
 ```
 
 ## Meta
@@ -182,7 +182,6 @@ tbl_df(bind_rows(lapply(res, jsonlite::fromJSON)))
 * Please [report any issues or bugs](https://github.com/ropensci/rcitoid/issues)
 * License: MIT
 * Get citation information for `rcitoid` in R doing `citation(package = 'rcitoid')`
-* Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
-
+* Please note that this package is released with a [Contributor Code of Conduct](https://ropensci.org/code-of-conduct/). By contributing to this project, you agree to abide by its terms.
 
 [![ropensci_footer](https://ropensci.org/public_images/github_footer.png)](https://ropensci.org)

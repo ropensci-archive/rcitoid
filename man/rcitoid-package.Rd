@@ -9,6 +9,6 @@
 Client for Citoid (\url{https://www.mediawiki.org/wiki/Citoid})
 }
 \author{
-Scott Chamberlain \email{sckott@protonmail.com}
+Scott Chamberlain
 }
 \keyword{package}

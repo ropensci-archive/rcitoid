@@ -7,6 +7,6 @@
 #' @name rcitoid-package
 #' @aliases rcitoid
 #' @docType package
-#' @author Scott Chamberlain \email{sckott@@protonmail.com}
+#' @author Scott Chamberlain
 #' @keywords package
 NULL

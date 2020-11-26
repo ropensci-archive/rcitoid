@@ -3,8 +3,7 @@ rcitoid
 
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![cran checks](https://cranchecks.info/badges/worst/rcitoid)](https://cranchecks.info/pkgs/rcitoid)
-[![Build Status](https://travis-ci.com/ropensci/rcitoid.svg?branch=master)](https://travis-ci.com/ropensci/rcitoid)
-[![Build status](https://ci.appveyor.com/api/projects/status/yk8vpcdr1rmi7byy?svg=true)](https://ci.appveyor.com/project/sckott/rcitoid)
+[![R-check](https://github.com/ropensci/rcitoid/workflows/R-check/badge.svg)](https://github.com/ropensci/rcitoid/actions?query=workflow%3AR-check)
 [![codecov](https://codecov.io/gh/ropensci/rcitoid/branch/master/graph/badge.svg)](https://codecov.io/gh/ropensci/rcitoid)
 [![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/rcitoid)](https://github.com/r-hub/cranlogs.app)
 [![cran version](https://www.r-pkg.org/badges/version/rcitoid)](https://cran.r-project.org/package=rcitoid)
@@ -56,7 +55,7 @@ use underscore method to get text
 ```r
 cit_oid_("10.1108/jd-12-2013-0166")
 #> [[1]]
-#> [1] "[{\"key\":\"6GCZU4NS\",\"version\":0,\"itemType\":\"journalArticle\",\"tags\":[],\"publicationTitle\":\"Journal of Documentation\",\"journalAbbreviation\":\"Journal of Documentation\",\"volume\":\"71\",\"issue\":\"2\",\"language\":\"en\",\"ISSN\":[\"0022-0418\"],\"date\":\"2015-03-09\",\"pages\":\"253–277\",\"DOI\":\"10.1108/JD-12-2013-0166\",\"url\":\"https://www.emerald.com/insight/content/doi/10.1108/JD-12-2013-0166/full/html\",\"title\":\"Setting our bibliographic references free: towards open citation data\",\"libraryCatalog\":\"DOI.org (Crossref)\",\"accessDate\":\"2020-09-17\",\"shortTitle\":\"Setting our bibliographic references free\",\"author\":[[\"Silvio\",\"Peroni\"],[\"Alexander\",\"Dutton\"],[\"Tanya\",\"Gray\"],[\"David\",\"Shotton\"]],\"source\":[\"Zotero\",\"Zotero\"]}]"
+#> [1] "[{\"key\":\"6FVPATDA\",\"version\":0,\"itemType\":\"journalArticle\",\"tags\":[],\"publicationTitle\":\"Journal of Documentation\",\"journalAbbreviation\":\"Journal of Documentation\",\"volume\":\"71\",\"issue\":\"2\",\"language\":\"en\",\"ISSN\":[\"0022-0418\"],\"date\":\"2015-03-09\",\"pages\":\"253–277\",\"DOI\":\"10.1108/JD-12-2013-0166\",\"url\":\"https://www.emerald.com/insight/content/doi/10.1108/JD-12-2013-0166/full/html\",\"title\":\"Setting our bibliographic references free: towards open citation data\",\"libraryCatalog\":\"DOI.org (Crossref)\",\"accessDate\":\"2020-11-26\",\"shortTitle\":\"Setting our bibliographic references free\",\"author\":[[\"Silvio\",\"Peroni\"],[\"Alexander\",\"Dutton\"],[\"Tanya\",\"Gray\"],[\"David\",\"Shotton\"]],\"source\":[\"Zotero\"]}]"
 #> attr(,"type")
 #> [1] "json"
 ```
@@ -70,7 +69,7 @@ DOI
 cit_oid("10.1108/jd-12-2013-0166")
 #> [[1]]
 #> [[1]]$key
-#> [1] "YFQK7UCZ"
+#> [1] "HCXFCV8F"
 #> 
 #> [[1]]$version
 #> [1] 0
@@ -88,7 +87,7 @@ PMID
 cit_oid(30446726)
 #> [[1]]
 #> [[1]]$key
-#> [1] "R4A72DW5"
+#> [1] "JDITNMEK"
 #> 
 #> [[1]]$version
 #> [1] 0
@@ -106,7 +105,7 @@ PMCID
 cit_oid("PMC4679344")
 #> [[1]]
 #> [[1]]$key
-#> [1] "VSJ5LSKX"
+#> [1] "SY68KLQD"
 #> 
 #> [[1]]$version
 #> [1] 0
@@ -152,28 +151,28 @@ dois <- c("10.1109/jsac.2011.110806", "10.1007/s00422-006-0078-4",
   "10.1109/wispnet.2017.8299996")
 res <- cit_oid_(id = c(pmid, pmcid, isbn, dois))
 tbl_df(bind_rows(lapply(res, jsonlite::fromJSON)))
-#> # A tibble: 13 x 34
-#>    key   version itemType tags  title websiteTitle url   abstractNote date 
-#>    <chr>   <int> <chr>    <lis> <chr> <chr>        <chr> <chr>        <chr>
-#>  1 TDF5…       0 webpage  <lis… Enha… Mucosal imm… http… "BCG, the o… 2019…
-#>  2 R2LH…       0 journal… <df[… Shar… <NA>         http… "Sex determ… 06 0…
-#>  3 YEQJ…       0 journal… <df[… Resp… <NA>         http… "With the i… 2018 
-#>  4 H4CX…       0 journal… <df[… Mixe… <NA>         http… "Medicinal … 2019…
-#>  5 NSWJ…       0 journal… <lis… ESMO… <NA>         http… "Supplement… 2016…
-#>  6 V3N3…       0 journal… <lis… Effi… <NA>         http… "Background… 2019…
-#>  7 NHLX…       0 journal… <lis… Iden… <NA>         http… "Background… 2019…
-#>  8 <NA>       NA book     <NUL… Agro… <NA>         http… "Providing … <NA> 
-#>  9 MBYX…       0 journal… <lis… Anti… <NA>         http…  <NA>        2011…
-#> 10 LTT6…       0 journal… <lis… The … <NA>         http…  <NA>        2006…
-#> 11 RJB8…       0 book     <lis… The … <NA>         <NA>   <NA>        2006 
-#> 12 U4EQ…       0 confere… <df[… Desi… <NA>         http… "Testabilit… 2009…
-#> 13 RDTJ…       0 confere… <lis… Traf… <NA>         http…  <NA>        2017…
-#> # … with 25 more variables: extra <chr>, language <chr>, accessDate <chr>,
-#> #   author <list>, PMID <chr>, PMCID <chr>, DOI <chr>, source <list>,
-#> #   pages <chr>, ISSN <list>, journalAbbreviation <chr>,
-#> #   publicationTitle <chr>, volume <chr>, issue <chr>, libraryCatalog <chr>,
-#> #   shortTitle <chr>, oclc <chr>, ISBN <list>, place <chr>, numPages <chr>,
-#> #   contributor <list>, publisher <chr>, editor <list>, proceedingsTitle <chr>,
+#> # A tibble: 13 x 33
+#>    key   version itemType tags  title pages ISSN  journalAbbrevia…
+#>    <chr>   <int> <chr>    <lis> <chr> <chr> <lis> <chr>           
+#>  1 P4CD…       0 journal… <df[… Enha… 555–… <chr… Mucosal Immunol 
+#>  2 QR7H…       0 journal… <df[… Shar… 1113… <chr… Mol Biol Evol   
+#>  3 SLTV…       0 journal… <df[… Resp… 1981  <chr… Front Plant Sci 
+#>  4 CWF3…       0 journal… <df[… Mixe… 604–… <chr… Integr Zool     
+#>  5 YG5T…       0 journal… <lis… ESMO… 2–30  <chr… Int J Gynecol C…
+#>  6 6W95…       0 journal… <lis… Effi… <NA>  <chr… J Orthop Surg R…
+#>  7 R3ZP…       0 journal… <lis… Iden… <NA>  <chr… J Hematol Oncol 
+#>  8 <NA>       NA book     <NUL… Agro… <NA>  <NUL… <NA>            
+#>  9 G24A…       0 journal… <lis… Anti… 1392… <chr… IEEE J. Select.…
+#> 10 SXSZ…       0 journal… <lis… The … 193–… <chr… Biol Cybern     
+#> 11 LG4G…       0 book     <lis… The … <NA>  <NUL… <NA>            
+#> 12 778X…       0 confere… <df[… Desi… 1–47… <NUL… <NA>            
+#> 13 P5X4…       0 confere… <lis… Traf… 1412… <NUL… <NA>            
+#> # … with 25 more variables: publicationTitle <chr>, volume <chr>, issue <chr>,
+#> #   date <chr>, abstractNote <chr>, DOI <chr>, extra <chr>,
+#> #   libraryCatalog <chr>, url <chr>, accessDate <chr>, author <list>,
+#> #   PMID <chr>, PMCID <chr>, source <list>, shortTitle <chr>, oclc <chr>,
+#> #   ISBN <list>, place <chr>, numPages <chr>, contributor <list>,
+#> #   language <chr>, publisher <chr>, editor <list>, proceedingsTitle <chr>,
 #> #   conferenceName <chr>
 ```
 
